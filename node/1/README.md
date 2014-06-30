@@ -1,11 +1,11 @@
 #Write a node.js pgm
+*(express can be used)*
 
-Run on port 8547
-When post to
+Run on port 8547, When POST to
 
-**http://localhost:8547/test/{number}?user={userName}**
+**http://localhost:8547/test/{number}?user={userName}**,
 
-It should respond with all post params as **valid JSON** along with number and userName from the URL itself.
+it should respond with all post params as **valid JSON** along with number and userName from the URL itself.
 
 
 * for example:
@@ -14,11 +14,13 @@ It should respond with all post params as **valid JSON** along with number and u
    
    http://localhost:8547/test/77?user=Toobler
    POST:	check="1"
+         checkAnother="Random"
    
    ###response:
    
    {
    	number:77,
    	user:Toobler,
-   	check:1
+   	check:1,
+   	checkAnother:Random
    }
