@@ -1,0 +1,12 @@
+{
+  "name": "Mirror",
+  "version": "0.1.0",
+  "description": "node ABS app",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+	"express": "~3.2.4"
+}
+}
