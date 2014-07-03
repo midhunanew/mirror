@@ -1,5 +1,5 @@
- /***
-* Mirror
+/***
+* Merxz
 *
 * Author                : Anilda Lopez (anildalopez14@gmail.com)
 * Company               : Toobler
@@ -37,9 +37,7 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 *@param callback function(object,object)
 */
 app.post('/test/:number', function(req,res){
-	console.log('ddd');
-	console.log(req.body);
-    //for responding in valid JSON format 
+	//for responding in valid JSON format 
 	res.json({number : req.params.number , user : req.query.user , check : req.body.check, checkAnother : req.body.checkAnother});
 	console.log(req.route);
 });
