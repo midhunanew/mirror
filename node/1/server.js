@@ -1,7 +1,7 @@
  /***
-* Merxz
+* Mirror
 *
-* Author                : Jumana Shireen (jumana.shireen14@gmail.com)
+* Author                : Anilda Lopez (anildalopez14@gmail.com)
 * Company               : Toobler
 * Email:                : info@toobler.com
 * Web site              : http://www.toobler.com
@@ -17,37 +17,32 @@
 */
 var express = require('express');
 var bodyParser = require('body-parser');
-
-//var url = require( "url" );
-
+//create application
 var app = express();
-// set port number to be communicated with
+// makes server be able to accept a parameter from the environment what port to listen on.
 app.set('port', process.env.PORT || 8547);
 
-
+ // to support URL-encoded bodies
 app.use(bodyParser.urlencoded());
-
-// parse application/json
+ // to support JSON-encoded bodies
 app.use(bodyParser.json());
 
 // parse application/vnd.api+json as json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 
-
 /*
- *function for handling post request
- *@param path
- *param function callback(Request,Response)
+*function to POST data
+*@param path
+*@param callback function(object,object)
 */
 app.post('/test/:number', function(req,res){
-	
+	console.log('ddd');
 	console.log(req.body);
-	
-	// returns response in valid json format.
-	res.json({number : req.params.number, user :  req.query.user, check : req.body.check, checkAnother : req.body.checkAnother } );
+    //for responding in valid JSON format 
+	res.json({number : req.params.number , user : req.query.user , check : req.body.check, checkAnother : req.body.checkAnother});
+	console.log(req.route);
 });
 
 //listen for request at specified port number
 app.listen(8547);
-
