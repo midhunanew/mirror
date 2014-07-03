@@ -1,4 +1,4 @@
-##! Did you know we can have **for** loops without statement section?
+##! Did you know, we can have **for** loops without statement section?
 
 
 ```
