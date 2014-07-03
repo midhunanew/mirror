@@ -1,12 +1,12 @@
-/***
+ /***
 * Merxz
 *
-* Author                : Anilda Lopez (anildalopez14@gmail.com)
+* Author                : Jumana Shireen (jumana.shireen14@gmail.com)
 * Company               : Toobler
 * Email:                : info@toobler.com
 * Web site              : http://www.toobler.com
 * Created               : 3/July/2014
-* Description           : server for managing post method
+* Description           : Server for managing post method
 * ==============================================================================================
 * Change History:
 * ----------------------------------------------------------------------------------------------
@@ -17,39 +17,37 @@
 */
 var express = require('express');
 var bodyParser = require('body-parser');
-//create application
+
+//var url = require( "url" );
+
 var app = express();
-// makes server be able to accept a parameter from the environment what port to listen on.
+// set port number to be communicated with
 app.set('port', process.env.PORT || 8547);
 
- // to support URL-encoded bodies
+
 app.use(bodyParser.urlencoded());
- // to support JSON-encoded bodies
+
+// parse application/json
 app.use(bodyParser.json());
 
 // parse application/vnd.api+json as json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 
+
 /*
-app.set('views', path.join(“/directory/”, 'views'));
-app.set('view engine', 'jade');
-app.get('/', function(req, res){
-req.params('name')
-});
-*/
-/*
-*function to POST data
-*@param path
-*@param callback function(object,object)
+ *function for handling post request
+ *@param path
+ *@param function callback(Request object ,Response object)
 */
 app.post('/test/:number', function(req,res){
-	console.log('ddd');
+	
 	console.log(req.body);
-    //for responding in valid JSON format 
-	res.json({number : req.params.number , user : req.query.user , check : req.body.check, checkAnother : req.body.checkAnother});
-	console.log(req.route);
+	
+	// returns response in valid json format.
+	res.json({number : req.params.number, user :  req.query.user, check : req.body.check, checkAnother : req.body.checkAnother } );
 });
 
-//  To run on port 8547
+//listen for request at specified port number
 app.listen(8547);
+
