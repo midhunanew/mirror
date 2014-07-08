@@ -2,7 +2,9 @@
 
 
 git clone https://github.com/KrIsHnA-Revoked/mirror.git
+
 cd mirror/
+
 remote -v
 
 ```
@@ -12,6 +14,7 @@ origin	https://github.com/KrIsHnA-Revoked/mirror.git (push)
 
 
 git remote add midhun https://github.com/midhunanew/mirror.git
+
 git remote -v
 
 ```
@@ -22,6 +25,7 @@ origin	https://github.com/KrIsHnA-Revoked/mirror.git (push)
 ```
 
 git remote rename origin krishna
+
 git remote -v
 
 ```
