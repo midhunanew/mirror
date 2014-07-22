@@ -7,3 +7,5 @@
 
 # etc...
 node_modules/
+__basics__/grunt/grunt.zip
+__basics__/grunt/dist/
