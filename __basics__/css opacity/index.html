@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			background-color:#ffffff;
+		}
+		body div {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		#zero{
+			background-color: blue;
+			width: 400px;
+			height: 400px;
+			top:50px;
+			left:50px;
+		}
+		#one, #oneC {
+			opacity: .5;
+			background-color: red;
+			width: 200px;
+			height: 200px;
+		}
+		#two {
+			opacity: .5;
+			background-color: green;
+			width: 100px;
+			height:400px;
+			top:50px;
+		}
+		#three {
+			opacity: .5;
+			background-color: yellow;
+			left: 50px;
+			height: 100px;
+			width: 400px;
+		}
+	</style>
+	<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    console.log("DOM fully loaded and parsed");
+    var table = document.getElementById("container");
+    console.log(table);
+		var i, allDivs = table.getElementsByTagName("div");
+		console.log(allDivs.length);
+		for(i=0; i<allDivs.length; i++){
+			allDivs[i].addEventListener("click", processEvent, false);	
+		}
+  });
+
+		function processEvent(e){
+			e.target.style.display="none";
+		}
+
+	</script>
+</head>
+<body>
+	<div id="container">
+		<div id="zero"></div>
+		<div id="one"></div>
+		<div id="oneC"></div>
+		<div id="two"></div>
+		<div id="three"></div>
+	</div>
+</body>
+</html> 

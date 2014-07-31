@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+	<script>
+
+	angular.module('controllerAsExample', [])
+  .controller('TestController', TestController);
+
+  function TestController(){
+  	this.test = 'blah blah';
+  }
+
+	</script
+</head>
+<body>
+<div ng-init="temp = 'angular'"></div>
+{{temp}} is running
+<div ng-controller="TestController as text">{{text.test}}</div>
+</body>
+</html> 
