@@ -1,0 +1,16 @@
+/**
+* Find max.width and max.width possible crop ratio without loss
+**/
+
+var w = 900,h = 600;
+//required ratio is 3:2 (w:h)
+
+
+if(h <= ((w/3)*2)) {
+  w = (h/2)*3;
+}
+else {
+  h = (w/3)*2;
+}
+
+console.log('%s x %s',w,h);
