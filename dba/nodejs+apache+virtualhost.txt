@@ -1,6 +1,12 @@
 sudo mkdir -p /var/www/example.com/
 sudo chmod -R 755 /var/www
 
+sudo a2enmod proxy_http
+sudo a2enmod ssl
+sudo a2enmod proxy
+sudo a2enmod proxy_balancer
+sudo service apache2 restart
+
 # Create the First Virtual Host File
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/example.com.conf
 # OR
